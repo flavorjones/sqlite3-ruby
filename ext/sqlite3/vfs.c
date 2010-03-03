@@ -12,7 +12,7 @@ static int rbFile_close(sqlite3_file * ctx)
 {
   rubyFilePtr rfile = (rubyFilePtr)ctx;
   VALUE file = rfile->file;
-  rb_funcall(file, rb_intern("close"), 0);
+  if (TYPE(file) != T_NONE) rb_funcall(file, rb_intern("close"), 0);
   return SQLITE_OK;
 }
 
@@ -105,7 +105,7 @@ static int rbFile_unlock(sqlite3_file * ctx, int mode)
 {
   rubyFilePtr rfile = (rubyFilePtr)ctx;
   VALUE file = rfile->file;
-  rb_funcall(file, rb_intern("unlock"), 1, INT2NUM((long)mode));
+  if (TYPE(file) != T_NONE) rb_funcall(file, rb_intern("unlock"), 1, INT2NUM((long)mode));
 
   return SQLITE_OK;
 }
