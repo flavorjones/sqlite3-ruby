@@ -2139,7 +2139,7 @@
     "kind": "running"
   },
   "status_updated_at": "2026-07-31T15:10:00.665032948Z",
-  "last_event_at": "2026-07-31T15:10:06.557393592Z",
+  "last_event_at": "2026-07-31T15:10:40.175103984Z",
   "pending_control": null,
   "checkpoints": [
     {
@@ -2305,9 +2305,9 @@
       }
     },
     {
-      "seq": 0,
+      "seq": 43,
       "checkpoint": {
-        "timestamp": "2026-07-31T15:10:06.826556745Z",
+        "timestamp": "2026-07-31T15:10:10.060359088Z",
         "current_node": "target_gate",
         "completed_nodes": [
           "start",
@@ -2316,11 +2316,275 @@
         ],
         "node_retries": {},
         "context_values": {
-          "effort": "medium",
-          "internal.node_visit_count": 1,
+          "internal.work_dir": "/home/daytona/workspace/sqlite3-ruby",
+          "thread.prepare.current_node": "target_gate",
+          "graph.default_max_retries": "0",
+          "graph.stall_timeout": "3600000ms",
+          "internal.fidelity": "compact",
           "internal.thread_id": "prepare",
+          "graph.rankdir": "LR",
+          "failure_signature": "",
+          "internal.node_visit_count": 1,
+          "graph.model_stylesheet": "\n            * { model: sonnet; reasoning_effort: low; }\n            .inventory { model: sonnet; reasoning_effort: medium; }\n            .threat-model { model: opus; reasoning_effort: medium; }\n            .research { model: opus; reasoning_effort: xhigh; }\n            .verification { model: opus; reasoning_effort: xhigh; }\n        ",
+          "outcome": "succeeded",
+          "products_dir": "SECURITY-REVIEW-20260731-151002",
+          "empty_target": false,
+          "effort": "medium",
+          "graph.default_fidelity": "compact",
+          "current_node": "target_gate",
+          "graph.goal": "Perform an adversarial, read-only security review of this repository and report only panel-verified findings.",
+          "internal.retry_count.prepare": 0,
+          "inventory_assignment": {
+            "scanRoot": "/home/daytona/repos/flavorjones/sqlite3-ruby",
+            "target": {
+              "mode": "scan",
+              "scope": [],
+              "range": null,
+              "changedFileCount": null,
+              "changedLineCount": null,
+              "focus": null,
+              "scanRoot": "/home/daytona/repos/flavorjones/sqlite3-ruby",
+              "gitWrapper": "python3 .fabro/workflows/security-review/scripts/git_readonly.py"
+            },
+            "maxComponents": 12,
+            "topLevelDirectories": [
+              ".fabro",
+              "ext",
+              "faq",
+              "lib",
+              "tasks",
+              "test"
+            ],
+            "wholeTreeCompletenessRequired": true
+          },
+          "failure_class": "",
+          "mode": "scan",
+          "thread.start.current_node": "prepare",
+          "use_inventory": true,
+          "internal.retry_count.start": 0,
+          "internal.retry_count.target_gate": 0,
+          "command.output": "blob://sha256/5ef1b8d87e336e7ed189d19764053c2781622afcdd066b16d3682a47704545fa",
+          "internal.run_id": "01KYWBK51YEGYDWXXPJZY2ZNDF"
+        },
+        "node_outcomes": {
+          "start": {
+            "status": "succeeded",
+            "usage": null
+          },
+          "target_gate": {
+            "status": "succeeded",
+            "notes": "Conditional node evaluated: target_gate",
+            "usage": null
+          },
+          "prepare": {
+            "status": "succeeded",
+            "context_updates": {
+              "products_dir": "SECURITY-REVIEW-20260731-151002",
+              "command.output": "blob://sha256/5ef1b8d87e336e7ed189d19764053c2781622afcdd066b16d3682a47704545fa",
+              "empty_target": false,
+              "effort": "medium",
+              "inventory_assignment": {
+                "scanRoot": "/home/daytona/repos/flavorjones/sqlite3-ruby",
+                "target": {
+                  "mode": "scan",
+                  "scope": [],
+                  "range": null,
+                  "changedFileCount": null,
+                  "changedLineCount": null,
+                  "focus": null,
+                  "scanRoot": "/home/daytona/repos/flavorjones/sqlite3-ruby",
+                  "gitWrapper": "python3 .fabro/workflows/security-review/scripts/git_readonly.py"
+                },
+                "maxComponents": 12,
+                "topLevelDirectories": [
+                  ".fabro",
+                  "ext",
+                  "faq",
+                  "lib",
+                  "tasks",
+                  "test"
+                ],
+                "wholeTreeCompletenessRequired": true
+              },
+              "mode": "scan",
+              "use_inventory": true
+            },
+            "notes": "Script completed: python3 -c \"import hashlib,sys; pairs=list(zip(sys.argv[1::2],sys.argv[2::2])); sys.exit(0 if pairs and all(hashlib.sha256(open(path,'rb').read()).hexdigest()==expected for path,expected in pairs) else 91)\" .fabro/workflows/security-review/scripts/security_review.py db08c08320c2c1fb6cd3226fb70fa5672794c0cd12be7d78b82214fc7346258d .fabro/workflows/security-review/scripts/git_readonly.py 6bafe2418234d7887d9f4726208bc9e50325bf34c5098c4a6ef508f1a5486ec5 .fabro/workflows/security-review/scripts/render_report.py 6949cb65bf950b41cf1937deb9eac111a026fe11bf7aa35eb34d53dd670100c4 .fabro/workflows/security-review/specs/report-spec.md 18e3eb3de3c2f585cd4e24d3168b0aaf0176a72ba5efeadaf6773cee1c5f2be2 .fabro/workflows/security-review/templates/report.html 55583ce1e9272ccbc0c048bf8d2ba660e443ca3b77c929958ab0955ac4616777 && python3 .fabro/workflows/security-review/scripts/security_review.py prepare --scan-id-stdin --mode scan --effort medium --scope '' --base '' --commit '' --range '' --focus ''",
+            "usage": null,
+            "timing": {
+              "wall_time_ms": 0,
+              "inference_time_ms": 0,
+              "tool_time_ms": 1373,
+              "active_time_ms": 1373
+            }
+          }
+        },
+        "next_node_id": "inventory",
+        "git_commit_sha": "8da2711435bca8696594901d2e23ae396147c5e7",
+        "node_visits": {
+          "target_gate": 1,
+          "prepare": 1,
+          "start": 1
+        }
+      },
+      "diff": {
+        "summary": {
+          "files_changed": 0,
+          "additions": 0,
+          "deletions": 0
+        }
+      }
+    },
+    {
+      "seq": 0,
+      "checkpoint": {
+        "timestamp": "2026-07-31T15:10:40.516786626Z",
+        "current_node": "inventory",
+        "completed_nodes": [
+          "start",
+          "prepare",
+          "target_gate",
+          "inventory"
+        ],
+        "node_retries": {},
+        "context_values": {
+          "effort": "medium",
+          "thread.inventory.current_node": "inventory",
+          "internal.node_visit_count": 1,
+          "output.inventory": {
+            "components": [
+              {
+                "name": "ext-database-c",
+                "paths": [
+                  "ext/sqlite3/database.c",
+                  "ext/sqlite3/database.h"
+                ],
+                "language": "C",
+                "role": "C extension: database open/close, SQL execution, busy handler, function/aggregate registration, memory management for the SQLite connection",
+                "internetFacing": false
+              },
+              {
+                "name": "ext-statement-c",
+                "paths": [
+                  "ext/sqlite3/statement.c",
+                  "ext/sqlite3/statement.h"
+                ],
+                "language": "C",
+                "role": "C extension: prepared statement lifecycle, parameter binding, column value marshaling between SQLite and Ruby",
+                "internetFacing": false
+              },
+              {
+                "name": "ext-exception-sqlite3-c",
+                "paths": [
+                  "ext/sqlite3/exception.c",
+                  "ext/sqlite3/exception.h",
+                  "ext/sqlite3/sqlite3.c",
+                  "ext/sqlite3/sqlite3_ruby.h"
+                ],
+                "language": "C",
+                "role": "C extension: error code to Ruby exception mapping and extension init/entrypoint",
+                "internetFacing": false
+              },
+              {
+                "name": "lib-database",
+                "paths": [
+                  "lib/sqlite3/database.rb",
+                  "lib/sqlite3/pragmas.rb"
+                ],
+                "language": "Ruby",
+                "role": "Ruby API layer for opening databases, executing SQL/pragmas, transactions, and authorization callbacks",
+                "internetFacing": false
+              },
+              {
+                "name": "lib-statement-resultset-value",
+                "paths": [
+                  "lib/sqlite3/statement.rb",
+                  "lib/sqlite3/resultset.rb",
+                  "lib/sqlite3/value.rb",
+                  "lib/sqlite3/translator.rb"
+                ],
+                "language": "Ruby",
+                "role": "Ruby wrappers for prepared statements, result iteration, and type translation of returned column values",
+                "internetFacing": false
+              },
+              {
+                "name": "lib-core-misc",
+                "paths": [
+                  "lib/sqlite3.rb",
+                  "lib/sqlite3/constants.rb",
+                  "lib/sqlite3/errors.rb",
+                  "lib/sqlite3/version.rb"
+                ],
+                "language": "Ruby",
+                "role": "Library entrypoint, constants, error classes, version metadata",
+                "internetFacing": false
+              },
+              {
+                "name": "build-tasks",
+                "paths": [
+                  "ext/sqlite3/extconf.rb",
+                  "tasks/native.rake",
+                  "tasks/vendor_sqlite3.rake",
+                  "Rakefile",
+                  "setup.rb"
+                ],
+                "language": "Ruby",
+                "role": "Build/extconf scripts and rake tasks that compile the C extension and vendor the SQLite3 amalgamation, potentially downloading/compiling native code",
+                "internetFacing": false
+              },
+              {
+                "name": "faq-tool",
+                "paths": [
+                  "faq/faq.rb",
+                  "faq/faq.yml",
+                  "tasks/faq.rake"
+                ],
+                "language": "Ruby",
+                "role": "Developer utility that generates FAQ documentation from YAML; minor auxiliary tool",
+                "internetFacing": false
+              }
+            ],
+            "securityScanSkippedComponents": [
+              {
+                "name": "test-suite",
+                "paths": [
+                  "test"
+                ],
+                "reason": "Test suite only; not shipped production code"
+              },
+              {
+                "name": "fabro-workflow",
+                "paths": [
+                  ".fabro"
+                ],
+                "reason": "Workflow tooling/configuration for this review process, not part of the reviewed product"
+              },
+              {
+                "name": "review-output",
+                "paths": [
+                  "SECURITY-REVIEW-20260731-151002"
+                ],
+                "reason": "Output directory generated by this review run, not repository source"
+              },
+              {
+                "name": "docs-metadata",
+                "paths": [
+                  "API_CHANGES.rdoc",
+                  "CHANGELOG.rdoc",
+                  "ChangeLog.cvs",
+                  "LICENSE",
+                  "Manifest.txt",
+                  "README.rdoc"
+                ],
+                "reason": "Documentation/metadata files with no executable logic"
+              }
+            ]
+          },
+          "internal.thread_id": "inventory",
           "thread.start.current_node": "prepare",
           "graph.goal": "Perform an adversarial, read-only security review of this repository and report only panel-verified findings.",
+          "response.inventory": "{\n  \"components\": [\n    {\n      \"name\": \"ext-database-c\",\n      \"paths\": [\"ext/sqlite3/database.c\", \"ext/sqlite3/database.h\"],\n      \"language\": \"C\",\n      \"role\": \"C extension: database open/close, SQL execution, busy handler, function/aggregate registration, memory management for the SQLite connection\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"ext-statement-c\",\n      \"paths\": [\"ext/sqlite3/statement.c\", \"ext/sqlite3/statement.h\"],\n      \"language\": \"C\",\n      \"role\": \"C extension: prepared statement lifecycle, parameter binding, column value marshaling between SQLite and Ruby\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"ext-exception-sqlite3-c\",\n      \"paths\": [\"ext/sqlite3/exception.c\", \"ext/sqlite3/exception.h\", \"ext/sqlite3/sqlite3.c\", \"ext/sqlite3/sqlite3_ruby.h\"],\n      \"language\": \"C\",\n      \"role\": \"C extension: error code to Ruby exception mapping and extension init/entrypoint\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"lib-database\",\n      \"paths\": [\"lib/sqlite3/database.rb\", \"lib/sqlite3/pragmas.rb\"],\n      \"language\": \"Ruby\",\n      \"role\": \"Ruby API layer for opening databases, executing SQL/pragmas, transactions, and authorization callbacks\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"lib-statement-resultset-value\",\n      \"paths\": [\"lib/sqlite3/statement.rb\", \"lib/sqlite3/resultset.rb\", \"lib/sqlite3/value.rb\", \"lib/sqlite3/translator.rb\"],\n      \"language\": \"Ruby\",\n      \"role\": \"Ruby wrappers for prepared statements, result iteration, and type translation of returned column values\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"lib-core-misc\",\n      \"paths\": [\"lib/sqlite3.rb\", \"lib/sqlite3/constants.rb\", \"lib/sqlite3/errors.rb\", \"lib/sqlite3/version.rb\"],\n      \"language\": \"Ruby\",\n      \"role\": \"Library entrypoint, constants, error classes, version metadata\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"build-tasks\",\n      \"paths\": [\"ext/sqlite3/extconf.rb\", \"tasks/native.rake\", \"tasks/vendor_sqlite3.rake\", \"Rakefile\", \"setup.rb\"],\n      \"language\": \"Ruby\",\n      \"role\": \"Build/extconf scripts and rake tasks that compile the C extension and vendor the SQLite3 amalgamation, potentially downloading/compiling native code\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"faq-tool\",\n      \"paths\": [\"faq/faq.rb\", \"faq/faq.yml\", \"tasks/faq.rake\"],\n      \"language\": \"Ruby\",\n      \"role\": \"Developer utility that generates FAQ documentation from YAML; minor auxiliary tool\",\n      \"internetFacing\": false\n    }\n  ],\n  \"securityScanSkippedComponents\": [\n    {\n      \"name\": \"test-suite\",\n      \"paths\": [\"test\"],\n      \"reason\": \"Test suite only; not shipped production code\"\n    },\n    {\n      \"name\": \"fabro-workflow\",\n      \"paths\": [\".fabro\"],\n      \"reason\": \"Workflow tooling/configuration for this review process, not part of the reviewed product\"\n    },\n    {\n      \"name\": \"review-output\",\n      \"paths\": [\"SECURITY-REVIEW-20260731-151002\"],\n      \"reason\": \"Output directory generated by this review run, not repository source\"\n    },\n    {\n      \"name\": \"docs-metadata\",\n      \"paths\": [\"API_CHANGES.rdoc\", \"CHANGELOG.rdoc\", \"ChangeLog.cvs\", \"LICENSE\", \"Manifest.txt\", \"README.rdoc\"],\n      \"reason\": \"Documentation/metadata files with no executable logic\"\n    }\n  ]\n}",
+          "last_response": "{\n  \"components\": [\n    {\n      \"name\": \"ext-database-c\",\n      \"paths\": [\"ext/sqlite3/database.c\", \"ext/sqlite3/database.h\"],\n      \"language\": \"C\",\n      \"role\": \"C extension: database open/close, S",
           "graph.rankdir": "LR",
           "empty_target": false,
           "products_dir": "SECURITY-REVIEW-20260731-151002",
@@ -2336,8 +2600,10 @@
           "graph.default_fidelity": "compact",
           "internal.work_dir": "/home/daytona/workspace/sqlite3-ruby",
           "command.output": "blob://sha256/5ef1b8d87e336e7ed189d19764053c2781622afcdd066b16d3682a47704545fa",
+          "internal.retry_count.inventory": 0,
           "internal.retry_count.target_gate": 0,
-          "current_node": "target_gate",
+          "current_node": "inventory",
+          "last_stage": "inventory",
           "graph.stall_timeout": "3600000ms",
           "internal.run_id": "01KYWBK51YEGYDWXXPJZY2ZNDF",
           "internal.retry_count.start": 0,
@@ -2414,13 +2680,181 @@
             "notes": "Conditional node evaluated: target_gate",
             "usage": null
           },
+          "inventory": {
+            "status": "succeeded",
+            "context_updates": {
+              "last_response": "{\n  \"components\": [\n    {\n      \"name\": \"ext-database-c\",\n      \"paths\": [\"ext/sqlite3/database.c\", \"ext/sqlite3/database.h\"],\n      \"language\": \"C\",\n      \"role\": \"C extension: database open/close, S",
+              "output.inventory": {
+                "components": [
+                  {
+                    "name": "ext-database-c",
+                    "paths": [
+                      "ext/sqlite3/database.c",
+                      "ext/sqlite3/database.h"
+                    ],
+                    "language": "C",
+                    "role": "C extension: database open/close, SQL execution, busy handler, function/aggregate registration, memory management for the SQLite connection",
+                    "internetFacing": false
+                  },
+                  {
+                    "name": "ext-statement-c",
+                    "paths": [
+                      "ext/sqlite3/statement.c",
+                      "ext/sqlite3/statement.h"
+                    ],
+                    "language": "C",
+                    "role": "C extension: prepared statement lifecycle, parameter binding, column value marshaling between SQLite and Ruby",
+                    "internetFacing": false
+                  },
+                  {
+                    "name": "ext-exception-sqlite3-c",
+                    "paths": [
+                      "ext/sqlite3/exception.c",
+                      "ext/sqlite3/exception.h",
+                      "ext/sqlite3/sqlite3.c",
+                      "ext/sqlite3/sqlite3_ruby.h"
+                    ],
+                    "language": "C",
+                    "role": "C extension: error code to Ruby exception mapping and extension init/entrypoint",
+                    "internetFacing": false
+                  },
+                  {
+                    "name": "lib-database",
+                    "paths": [
+                      "lib/sqlite3/database.rb",
+                      "lib/sqlite3/pragmas.rb"
+                    ],
+                    "language": "Ruby",
+                    "role": "Ruby API layer for opening databases, executing SQL/pragmas, transactions, and authorization callbacks",
+                    "internetFacing": false
+                  },
+                  {
+                    "name": "lib-statement-resultset-value",
+                    "paths": [
+                      "lib/sqlite3/statement.rb",
+                      "lib/sqlite3/resultset.rb",
+                      "lib/sqlite3/value.rb",
+                      "lib/sqlite3/translator.rb"
+                    ],
+                    "language": "Ruby",
+                    "role": "Ruby wrappers for prepared statements, result iteration, and type translation of returned column values",
+                    "internetFacing": false
+                  },
+                  {
+                    "name": "lib-core-misc",
+                    "paths": [
+                      "lib/sqlite3.rb",
+                      "lib/sqlite3/constants.rb",
+                      "lib/sqlite3/errors.rb",
+                      "lib/sqlite3/version.rb"
+                    ],
+                    "language": "Ruby",
+                    "role": "Library entrypoint, constants, error classes, version metadata",
+                    "internetFacing": false
+                  },
+                  {
+                    "name": "build-tasks",
+                    "paths": [
+                      "ext/sqlite3/extconf.rb",
+                      "tasks/native.rake",
+                      "tasks/vendor_sqlite3.rake",
+                      "Rakefile",
+                      "setup.rb"
+                    ],
+                    "language": "Ruby",
+                    "role": "Build/extconf scripts and rake tasks that compile the C extension and vendor the SQLite3 amalgamation, potentially downloading/compiling native code",
+                    "internetFacing": false
+                  },
+                  {
+                    "name": "faq-tool",
+                    "paths": [
+                      "faq/faq.rb",
+                      "faq/faq.yml",
+                      "tasks/faq.rake"
+                    ],
+                    "language": "Ruby",
+                    "role": "Developer utility that generates FAQ documentation from YAML; minor auxiliary tool",
+                    "internetFacing": false
+                  }
+                ],
+                "securityScanSkippedComponents": [
+                  {
+                    "name": "test-suite",
+                    "paths": [
+                      "test"
+                    ],
+                    "reason": "Test suite only; not shipped production code"
+                  },
+                  {
+                    "name": "fabro-workflow",
+                    "paths": [
+                      ".fabro"
+                    ],
+                    "reason": "Workflow tooling/configuration for this review process, not part of the reviewed product"
+                  },
+                  {
+                    "name": "review-output",
+                    "paths": [
+                      "SECURITY-REVIEW-20260731-151002"
+                    ],
+                    "reason": "Output directory generated by this review run, not repository source"
+                  },
+                  {
+                    "name": "docs-metadata",
+                    "paths": [
+                      "API_CHANGES.rdoc",
+                      "CHANGELOG.rdoc",
+                      "ChangeLog.cvs",
+                      "LICENSE",
+                      "Manifest.txt",
+                      "README.rdoc"
+                    ],
+                    "reason": "Documentation/metadata files with no executable logic"
+                  }
+                ]
+              },
+              "last_stage": "inventory",
+              "response.inventory": "{\n  \"components\": [\n    {\n      \"name\": \"ext-database-c\",\n      \"paths\": [\"ext/sqlite3/database.c\", \"ext/sqlite3/database.h\"],\n      \"language\": \"C\",\n      \"role\": \"C extension: database open/close, SQL execution, busy handler, function/aggregate registration, memory management for the SQLite connection\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"ext-statement-c\",\n      \"paths\": [\"ext/sqlite3/statement.c\", \"ext/sqlite3/statement.h\"],\n      \"language\": \"C\",\n      \"role\": \"C extension: prepared statement lifecycle, parameter binding, column value marshaling between SQLite and Ruby\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"ext-exception-sqlite3-c\",\n      \"paths\": [\"ext/sqlite3/exception.c\", \"ext/sqlite3/exception.h\", \"ext/sqlite3/sqlite3.c\", \"ext/sqlite3/sqlite3_ruby.h\"],\n      \"language\": \"C\",\n      \"role\": \"C extension: error code to Ruby exception mapping and extension init/entrypoint\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"lib-database\",\n      \"paths\": [\"lib/sqlite3/database.rb\", \"lib/sqlite3/pragmas.rb\"],\n      \"language\": \"Ruby\",\n      \"role\": \"Ruby API layer for opening databases, executing SQL/pragmas, transactions, and authorization callbacks\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"lib-statement-resultset-value\",\n      \"paths\": [\"lib/sqlite3/statement.rb\", \"lib/sqlite3/resultset.rb\", \"lib/sqlite3/value.rb\", \"lib/sqlite3/translator.rb\"],\n      \"language\": \"Ruby\",\n      \"role\": \"Ruby wrappers for prepared statements, result iteration, and type translation of returned column values\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"lib-core-misc\",\n      \"paths\": [\"lib/sqlite3.rb\", \"lib/sqlite3/constants.rb\", \"lib/sqlite3/errors.rb\", \"lib/sqlite3/version.rb\"],\n      \"language\": \"Ruby\",\n      \"role\": \"Library entrypoint, constants, error classes, version metadata\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"build-tasks\",\n      \"paths\": [\"ext/sqlite3/extconf.rb\", \"tasks/native.rake\", \"tasks/vendor_sqlite3.rake\", \"Rakefile\", \"setup.rb\"],\n      \"language\": \"Ruby\",\n      \"role\": \"Build/extconf scripts and rake tasks that compile the C extension and vendor the SQLite3 amalgamation, potentially downloading/compiling native code\",\n      \"internetFacing\": false\n    },\n    {\n      \"name\": \"faq-tool\",\n      \"paths\": [\"faq/faq.rb\", \"faq/faq.yml\", \"tasks/faq.rake\"],\n      \"language\": \"Ruby\",\n      \"role\": \"Developer utility that generates FAQ documentation from YAML; minor auxiliary tool\",\n      \"internetFacing\": false\n    }\n  ],\n  \"securityScanSkippedComponents\": [\n    {\n      \"name\": \"test-suite\",\n      \"paths\": [\"test\"],\n      \"reason\": \"Test suite only; not shipped production code\"\n    },\n    {\n      \"name\": \"fabro-workflow\",\n      \"paths\": [\".fabro\"],\n      \"reason\": \"Workflow tooling/configuration for this review process, not part of the reviewed product\"\n    },\n    {\n      \"name\": \"review-output\",\n      \"paths\": [\"SECURITY-REVIEW-20260731-151002\"],\n      \"reason\": \"Output directory generated by this review run, not repository source\"\n    },\n    {\n      \"name\": \"docs-metadata\",\n      \"paths\": [\"API_CHANGES.rdoc\", \"CHANGELOG.rdoc\", \"ChangeLog.cvs\", \"LICENSE\", \"Manifest.txt\", \"README.rdoc\"],\n      \"reason\": \"Documentation/metadata files with no executable logic\"\n    }\n  ]\n}"
+            },
+            "notes": "Stage completed: inventory",
+            "usage": {
+              "input": {
+                "usage": {
+                  "model": {
+                    "provider": "openrouter",
+                    "model_id": "claude-sonnet-5"
+                  },
+                  "tokens": {
+                    "input_tokens": 5052,
+                    "output_tokens": 3017,
+                    "reasoning_tokens": 60,
+                    "cache_read_tokens": 22044,
+                    "cache_write_tokens": 9134
+                  }
+                },
+                "facts": {
+                  "algorithm": "anthropic",
+                  "cache_write_5m_tokens": 9134,
+                  "cache_write_1h_tokens": 0
+                }
+              },
+              "total_usd_micros": 0
+            },
+            "timing": {
+              "wall_time_ms": 0,
+              "inference_time_ms": 27029,
+              "tool_time_ms": 2708,
+              "active_time_ms": 29737
+            }
+          },
           "start": {
             "status": "succeeded",
             "usage": null
           }
         },
-        "next_node_id": "inventory",
+        "next_node_id": "merge_inventory",
         "node_visits": {
+          "inventory": 1,
           "prepare": 1,
           "target_gate": 1,
           "start": 1
@@ -2459,7 +2893,12 @@
       "first_event_seq": 38,
       "prompt": null,
       "response": null,
-      "completion": null,
+      "completion": {
+        "outcome": "succeeded",
+        "notes": "Conditional node evaluated: target_gate",
+        "failure_reason": null,
+        "timestamp": "2026-07-31T15:10:06.825731601Z"
+      },
       "provider_used": null,
       "diff": null,
       "script_invocation": null,
@@ -2468,36 +2907,6 @@
       "output": null,
       "started_at": "2026-07-31T15:10:06.557393592Z",
       "handler": "conditional",
-      "graph_visit": 1,
-      "usage": {
-        "input_tokens": 0,
-        "output_tokens": 0,
-        "total_tokens": 0,
-        "reasoning_tokens": 0,
-        "cache_read_tokens": 0,
-        "cache_write_tokens": 0
-      },
-      "agent_control": "running",
-      "state": "running"
-    },
-    "start@1": {
-      "first_event_seq": 18,
-      "prompt": null,
-      "response": null,
-      "completion": {
-        "outcome": "succeeded",
-        "notes": null,
-        "failure_reason": null,
-        "timestamp": "2026-07-31T15:10:02.121030803Z"
-      },
-      "provider_used": null,
-      "diff": null,
-      "script_invocation": null,
-      "script_timing": null,
-      "parallel_results": null,
-      "output": null,
-      "started_at": "2026-07-31T15:10:02.026961772Z",
-      "handler": "start",
       "graph_visit": 1,
       "timing": {
         "wall_time_ms": 0,
@@ -2555,6 +2964,242 @@
         "inference_time_ms": 0,
         "tool_time_ms": 1373,
         "active_time_ms": 1373
+      },
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "reasoning_tokens": 0,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0
+      },
+      "agent_control": "running",
+      "state": "succeeded"
+    },
+    "inventory@1": {
+      "first_event_seq": 46,
+      "prompt": null,
+      "response": null,
+      "completion": null,
+      "provider_used": {
+        "mode": "agent",
+        "provider": "openrouter",
+        "model": "claude-sonnet-5",
+        "reasoning_effort": "medium"
+      },
+      "diff": null,
+      "script_invocation": null,
+      "script_timing": null,
+      "parallel_results": null,
+      "output": null,
+      "started_at": "2026-07-31T15:10:10.077525547Z",
+      "handler": "agent",
+      "graph_visit": 1,
+      "live_inference_ms": 27028,
+      "live_tool_ms": 2707,
+      "usage": {
+        "input_tokens": 5052,
+        "output_tokens": 3017,
+        "total_tokens": 39307,
+        "reasoning_tokens": 60,
+        "cache_read_tokens": 22044,
+        "cache_write_tokens": 9134,
+        "total_usd_micros": 0
+      },
+      "model": {
+        "provider": "openrouter",
+        "model_id": "claude-sonnet-5"
+      },
+      "permission_level": "full",
+      "agent_tools": [
+        {
+          "name": "Agent",
+          "description": "Launch a child agent for an independent task. Agents run in the background by default and notify the parent when they finish. Set run_in_background to false to wait for the result synchronously.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "subagent",
+          "invoked": false
+        },
+        {
+          "name": "AskUserQuestion",
+          "description": "Ask the human up to four questions when a decision is genuinely theirs to make. The UI automatically provides an Other option for custom text.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "other",
+          "invoked": false
+        },
+        {
+          "name": "Bash",
+          "description": "Execute a Bash command in a fresh foreground non-login shell. Use this for searches, git inspection, builds, tests, package managers, and terminal operations. Prefer `rg` for content search and `rg --files` for file discovery. Working-directory and environment changes do not persist between calls. `timeout` is in milliseconds, defaults to 120000, and is capped at 600000.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "shell",
+          "invoked": true
+        },
+        {
+          "name": "Edit",
+          "description": "Edit a file by replacing an exact string. The old_string must be an exact match and unique unless replace_all is true; include surrounding context when needed. Read the file first and preserve existing indentation.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "write",
+          "invoked": false
+        },
+        {
+          "name": "Read",
+          "description": "Read files before editing them. Returns line-numbered text and supports offset/limit for large files. Use this instead of shell cat, head, tail, or sed when inspecting repository files.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "read",
+          "invoked": false
+        },
+        {
+          "name": "SendMessage",
+          "description": "Send additional instructions to a running background agent by its task ID.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "subagent",
+          "invoked": false
+        },
+        {
+          "name": "TaskCreate",
+          "description": "Create pending tasks in the current session. Use concise subjects, descriptions, optional activeForm text, and metadata. Check TaskList first to avoid duplicate tasks.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "other",
+          "invoked": false
+        },
+        {
+          "name": "TaskGet",
+          "description": "Get one task by taskId, including subject, status, description, owner, blockedBy, and blocks.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "other",
+          "invoked": false
+        },
+        {
+          "name": "TaskList",
+          "description": "List tasks for the current session, including status, owner, and blocking dependencies. Use TaskGet with a taskId for full description and dependency details.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "other",
+          "invoked": false
+        },
+        {
+          "name": "TaskOutput",
+          "description": "Get a background agent's current status or wait for its final output. Automatic completion notifications make ordinary polling unnecessary.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "subagent",
+          "invoked": false
+        },
+        {
+          "name": "TaskStop",
+          "description": "Stop a running background agent by task ID.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "subagent",
+          "invoked": false
+        },
+        {
+          "name": "TaskUpdate",
+          "description": "Update an existing task's status, text, owner, metadata, or dependencies. Valid statuses are pending, in_progress, completed, and deleted. After completing a task, call TaskList to find newly unblocked work.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "other",
+          "invoked": false
+        },
+        {
+          "name": "WebFetch",
+          "description": "Fetch an HTTP or HTTPS URL and answer the supplied prompt from its contents.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "other",
+          "invoked": false
+        },
+        {
+          "name": "Write",
+          "description": "Create new files, or overwrite an existing file only when replacement is explicitly intended. Prefer edit_file for targeted changes to existing files because write_file overwrites the full file content.",
+          "source": {
+            "kind": "native"
+          },
+          "category": "write",
+          "invoked": false
+        }
+      ],
+      "context_window": {
+        "provider": "openrouter",
+        "model": "claude-sonnet-5",
+        "context_window_tokens": 1000000,
+        "input_tokens": 10626,
+        "usage_percent": 1.0626,
+        "count_method": "response_usage_scaled_breakdown",
+        "staleness": "live",
+        "generated_at": "2026-07-31T15:10:40.174065398Z",
+        "event_seq": 73,
+        "breakdown": [
+          {
+            "category": "system_prompt",
+            "tokens": 2651,
+            "usage_percent": 0.2651
+          },
+          {
+            "category": "tools",
+            "tokens": 3003,
+            "usage_percent": 0.3003
+          },
+          {
+            "category": "conversation",
+            "tokens": 4962,
+            "usage_percent": 0.4962
+          },
+          {
+            "category": "other",
+            "tokens": 10,
+            "usage_percent": 0.001
+          }
+        ],
+        "warnings": []
+      },
+      "agent_control": "running",
+      "state": "running"
+    },
+    "start@1": {
+      "first_event_seq": 18,
+      "prompt": null,
+      "response": null,
+      "completion": {
+        "outcome": "succeeded",
+        "notes": null,
+        "failure_reason": null,
+        "timestamp": "2026-07-31T15:10:02.121030803Z"
+      },
+      "provider_used": null,
+      "diff": null,
+      "script_invocation": null,
+      "script_timing": null,
+      "parallel_results": null,
+      "output": null,
+      "started_at": "2026-07-31T15:10:02.026961772Z",
+      "handler": "start",
+      "graph_visit": 1,
+      "timing": {
+        "wall_time_ms": 0,
+        "inference_time_ms": 0,
+        "tool_time_ms": 0,
+        "active_time_ms": 0
       },
       "usage": {
         "input_tokens": 0,
