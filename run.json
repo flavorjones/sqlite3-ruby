@@ -2139,7 +2139,7 @@
     "kind": "running"
   },
   "status_updated_at": "2026-07-31T15:00:49.490382212Z",
-  "last_event_at": "2026-07-31T15:33:32.605373338Z",
+  "last_event_at": "2026-07-31T15:33:36.091984823Z",
   "pending_control": null,
   "checkpoints": [
     {
@@ -5864,9 +5864,9 @@
       }
     },
     {
-      "seq": 0,
+      "seq": 409,
       "checkpoint": {
-        "timestamp": "2026-07-31T15:33:33.227629554Z",
+        "timestamp": "2026-07-31T15:33:36.091687835Z",
         "current_node": "render_report",
         "completed_nodes": [
           "start",
@@ -5888,32 +5888,26 @@
         ],
         "node_retries": {},
         "context_values": {
-          "thread.prepare.current_node": "target_gate",
-          "kept_count": 0,
-          "run_research": true,
-          "internal.thread_id": "final_tally",
-          "thread.sweep_gate.current_node": "dedup_rank",
-          "thread.panel_gate.current_node": "tally",
-          "outcome": "succeeded",
-          "thread.threat_gate.current_node": "research_gate",
+          "internal.retry_count.target_gate": 0,
+          "internal.run_id": "01KYWB2B0VNNK81X6TKSMM19ZJ",
           "thread.merge_research.current_node": "sweep_gate",
-          "mode": "scan",
-          "internal.retry_count.merge_research": 0,
-          "canonical_bundle_written": true,
-          "run_repanel": false,
-          "thread.final_tally.current_node": "render_report",
-          "parallel.branch_count": 1,
-          "internal.retry_count.prepare": 0,
+          "thread.target_gate.current_node": "plan_matrix",
+          "kept_count": 0,
+          "finding_count": 0,
+          "graph.model_stylesheet": "\n            * { model: sonnet; reasoning_effort: low; }\n            .inventory { model: sonnet; reasoning_effort: medium; }\n            .threat-model { model: opus; reasoning_effort: medium; }\n            .research { model: opus; reasoning_effort: xhigh; }\n            .verification { model: opus; reasoning_effort: xhigh; }\n        ",
+          "internal.retry_count.research_gate": 0,
+          "thread.research.current_node": "research_join",
+          "effort": "low",
+          "thread.effort_gate.current_node": "final_tally",
+          "stamp_path": "SECURITY-REVIEW-20260731-150051/SECURITY-REVIEW-REVISION-8c0baa2a5c36.json",
+          "internal.retry_count.threat_gate": 0,
           "command.output": "blob://sha256/44b8a480514cdba527d3c3f721103406bf478286205861e72daf703cdc542930",
           "use_inventory": false,
-          "run_sweeps": false,
-          "finding_count": 0,
-          "internal.retry_count.dedup_rank": 0,
-          "research_results_merged": 1,
+          "canonical_bundle_written": true,
+          "thread.final_tally.current_node": "render_report",
           "current_node": "render_report",
-          "effort": "low",
-          "internal.retry_count.research_join": 0,
-          "thread.start.current_node": "prepare",
+          "internal.retry_count.panel_gate": 0,
+          "internal.retry_count.dedup_rank": 0,
           "parallel.results": [
             {
               "id": "researcher",
@@ -5930,62 +5924,10 @@
               }
             }
           ],
-          "run_panel": false,
-          "empty_target": false,
-          "internal.retry_count.research_gate": 0,
-          "internal.retry_count.effort_gate": 0,
-          "report_path": "SECURITY-REVIEW-20260731-150051/SECURITY-REVIEW-RESULTS.md",
-          "thread.research_join.current_node": "merge_research",
-          "internal.retry_count.final_tally": 0,
-          "internal.retry_count.panel_gate": 0,
-          "thread.target_gate.current_node": "plan_matrix",
-          "run_threat_models": false,
-          "stamp_path": "SECURITY-REVIEW-20260731-150051/SECURITY-REVIEW-REVISION-8c0baa2a5c36.json",
-          "verification_status": "verified",
-          "graph.goal": "Perform an adversarial, read-only security review of this repository and report only panel-verified findings.",
-          "graph.rankdir": "LR",
-          "graph.default_fidelity": "compact",
-          "provisional_verification_status": "verified",
           "internal.fidelity": "compact",
-          "report_run_dir": "/home/daytona/repos/flavorjones/sqlite3-ruby/SECURITY-REVIEW-20260731-150051/.security-review-run",
-          "graph.model_stylesheet": "\n            * { model: sonnet; reasoning_effort: low; }\n            .inventory { model: sonnet; reasoning_effort: medium; }\n            .threat-model { model: opus; reasoning_effort: medium; }\n            .research { model: opus; reasoning_effort: xhigh; }\n            .verification { model: opus; reasoning_effort: xhigh; }\n        ",
-          "internal.retry_count.research": 0,
-          "internal.run_id": "01KYWB2B0VNNK81X6TKSMM19ZJ",
-          "max_effort": false,
-          "failure_class": "",
-          "thread.plan_matrix.current_node": "threat_gate",
-          "internal.retry_count.tally": 0,
-          "internal.work_dir": "/home/daytona/workspace/sqlite3-ruby",
-          "internal.retry_count.target_gate": 0,
-          "internal.retry_count.sweep_gate": 0,
-          "thread.effort_gate.current_node": "final_tally",
-          "graph.stall_timeout": "3600000ms",
-          "internal.retry_count.start": 0,
-          "products_dir": "SECURITY-REVIEW-20260731-150051",
-          "internal.retry_count.threat_gate": 0,
-          "internal.retry_count.plan_matrix": 0,
-          "thread.research.current_node": "research_join",
-          "thread.dedup_rank.current_node": "panel_gate",
-          "graph.default_max_retries": "0",
-          "internal.retry_count.render_report": 0,
-          "internal.node_visit_count": 1,
-          "inventory_assignment": {
-            "scanRoot": "/home/daytona/repos/flavorjones/sqlite3-ruby",
-            "target": {
-              "mode": "scan",
-              "scope": [],
-              "range": null,
-              "changedFileCount": null,
-              "changedLineCount": null,
-              "focus": null,
-              "scanRoot": "/home/daytona/repos/flavorjones/sqlite3-ruby",
-              "gitWrapper": "python3 .fabro/workflows/security-review/scripts/git_readonly.py"
-            },
-            "maxComponents": 12,
-            "topLevelDirectories": null,
-            "wholeTreeCompletenessRequired": false
-          },
           "thread.research_gate.current_node": "research",
+          "internal.retry_count.research_join": 0,
+          "internal.thread_id": "final_tally",
           "research_jobs": [
             {
               "name": "repository:all",
@@ -6013,10 +5955,77 @@
               }
             }
           ],
+          "thread.prepare.current_node": "target_gate",
+          "thread.dedup_rank.current_node": "panel_gate",
+          "graph.rankdir": "LR",
+          "internal.retry_count.effort_gate": 0,
+          "thread.research_join.current_node": "merge_research",
+          "internal.retry_count.sweep_gate": 0,
+          "thread.plan_matrix.current_node": "threat_gate",
           "thread.tally.current_node": "effort_gate",
-          "failure_signature": ""
+          "internal.retry_count.tally": 0,
+          "max_effort": false,
+          "run_research": true,
+          "thread.start.current_node": "prepare",
+          "inventory_assignment": {
+            "scanRoot": "/home/daytona/repos/flavorjones/sqlite3-ruby",
+            "target": {
+              "mode": "scan",
+              "scope": [],
+              "range": null,
+              "changedFileCount": null,
+              "changedLineCount": null,
+              "focus": null,
+              "scanRoot": "/home/daytona/repos/flavorjones/sqlite3-ruby",
+              "gitWrapper": "python3 .fabro/workflows/security-review/scripts/git_readonly.py"
+            },
+            "maxComponents": 12,
+            "topLevelDirectories": null,
+            "wholeTreeCompletenessRequired": false
+          },
+          "graph.default_max_retries": "0",
+          "research_results_merged": 1,
+          "failure_signature": "",
+          "internal.retry_count.research": 0,
+          "parallel.branch_count": 1,
+          "thread.sweep_gate.current_node": "dedup_rank",
+          "outcome": "succeeded",
+          "internal.node_visit_count": 1,
+          "products_dir": "SECURITY-REVIEW-20260731-150051",
+          "internal.retry_count.prepare": 0,
+          "report_path": "SECURITY-REVIEW-20260731-150051/SECURITY-REVIEW-RESULTS.md",
+          "report_run_dir": "/home/daytona/repos/flavorjones/sqlite3-ruby/SECURITY-REVIEW-20260731-150051/.security-review-run",
+          "thread.panel_gate.current_node": "tally",
+          "verification_status": "verified",
+          "internal.retry_count.plan_matrix": 0,
+          "run_panel": false,
+          "provisional_verification_status": "verified",
+          "run_repanel": false,
+          "internal.retry_count.final_tally": 0,
+          "run_threat_models": false,
+          "graph.stall_timeout": "3600000ms",
+          "empty_target": false,
+          "mode": "scan",
+          "failure_class": "",
+          "internal.retry_count.merge_research": 0,
+          "graph.default_fidelity": "compact",
+          "thread.threat_gate.current_node": "research_gate",
+          "internal.retry_count.render_report": 0,
+          "graph.goal": "Perform an adversarial, read-only security review of this repository and report only panel-verified findings.",
+          "internal.work_dir": "/home/daytona/workspace/sqlite3-ruby",
+          "run_sweeps": false,
+          "internal.retry_count.start": 0
         },
         "node_outcomes": {
+          "start": {
+            "status": "succeeded",
+            "usage": null
+          },
+          "threat_gate": {
+            "status": "succeeded",
+            "notes": "Conditional node evaluated: threat_gate",
+            "usage": null
+          },
           "render_report": {
             "status": "succeeded",
             "context_updates": {
@@ -6034,66 +6043,6 @@
               "tool_time_ms": 1341,
               "active_time_ms": 1341
             }
-          },
-          "research": {
-            "status": "succeeded",
-            "context_updates": {
-              "parallel.branch_count": 1,
-              "parallel.results": [
-                {
-                  "id": "researcher",
-                  "index": 0,
-                  "item_label": "repository:all",
-                  "status": "succeeded",
-                  "context_updates": {
-                    "last_response": "The sandbox filesystem for this run is unreachable, so I could not read a single line of the target repository. I made eight attempts across roughly three minutes of wall-clock waiting (including 20s,",
-                    "last_stage": "researcher",
-                    "output.researcher": {
-                      "findings": []
-                    },
-                    "response.researcher": "The sandbox filesystem for this run is unreachable, so I could not read a single line of the target repository. I made eight attempts across roughly three minutes of wall-clock waiting (including 20s, 45s, and 90s backoffs), using both `Bash` and `Read`, against both `/home/daytona/repos/flavorjones/sqlite3-ruby` (the `scanRoot` from the target) and `/home/daytona/workspace/sqlite3-ruby` (the stated working directory). Every call failed identically:\n\n```\nFailed to create Daytona session\n  caused by: bad request: failed to resolve container IP after 3 attempts: no IP address found. Is the Sandbox started?\n```\n\nAn independent read-only explorer sub-agent, dispatched separately, hit the same error on both `Bash` and `Read` and reported `FILESYSTEM UNAVAILABLE`. So this is an environment-level failure, not a path or permissions mistake on my part.\n\n**What this means for the review:** I performed no code reading, no source-to-sink tracing, and no verification of any kind. I have background familiarity with `sqlite3-ruby` as a project — a C extension binding libsqlite3, with obvious areas of interest such as `Statement#bind_param` handling, blob/text length arithmetic in `statement.c` and `database.c`, the `sqlite3_load_extension` surface, backup APIs, and the vendored amalgamation — but reporting anything from recollection would be fabrication. Findings in this workflow require an exact repository-relative file and line, a verbatim sink snippet, and a per-hop evidence chain, none of which I can produce without reading the tree. I am returning zero findings rather than a speculative one.\n\n**To get a real result:** restart the Daytona sandbox and re-run job `research:001-repository-e2885f2b:all`. No part of the scan completed, so the re-run needs no scoping adjustment.\n\n```json\n{\n  \"findings\": []\n}\n```"
-                  }
-                }
-              ]
-            },
-            "jump_to_node": "research_join",
-            "notes": "Parallel node dispatched 1 branches (1 succeeded, 0 failed)",
-            "usage": null
-          },
-          "sweep_gate": {
-            "status": "succeeded",
-            "notes": "Conditional node evaluated: sweep_gate",
-            "usage": null
-          },
-          "effort_gate": {
-            "status": "succeeded",
-            "notes": "Conditional node evaluated: effort_gate",
-            "usage": null
-          },
-          "target_gate": {
-            "status": "succeeded",
-            "notes": "Conditional node evaluated: target_gate",
-            "usage": null
-          },
-          "dedup_rank": {
-            "status": "succeeded",
-            "context_updates": {
-              "command.output": "blob://sha256/d124ef7f758744cab62fb57faa134f12c6738b9b471e577dc45f7aabdcd894ee",
-              "run_panel": false
-            },
-            "notes": "Script completed: python3 .fabro/workflows/security-review/scripts/security_review.py dedup-rank",
-            "usage": null,
-            "timing": {
-              "wall_time_ms": 0,
-              "inference_time_ms": 0,
-              "tool_time_ms": 1322,
-              "active_time_ms": 1322
-            }
-          },
-          "research_gate": {
-            "status": "succeeded",
-            "notes": "Conditional node evaluated: research_gate",
-            "usage": null
           },
           "final_tally": {
             "status": "succeeded",
@@ -6114,21 +6063,6 @@
               "active_time_ms": 1282
             }
           },
-          "threat_gate": {
-            "status": "succeeded",
-            "notes": "Conditional node evaluated: threat_gate",
-            "usage": null
-          },
-          "research_join": {
-            "status": "succeeded",
-            "notes": "Joined 1 parallel branch",
-            "usage": null
-          },
-          "panel_gate": {
-            "status": "succeeded",
-            "notes": "Conditional node evaluated: panel_gate",
-            "usage": null
-          },
           "tally": {
             "status": "succeeded",
             "context_updates": {
@@ -6144,6 +6078,41 @@
               "tool_time_ms": 1331,
               "active_time_ms": 1331
             }
+          },
+          "merge_research": {
+            "status": "succeeded",
+            "context_updates": {
+              "research_results_merged": 1,
+              "command.output": "blob://sha256/1116e77eb8af9fed65358b93b4330e1578c86026fc39cba600d2e078f48e1139"
+            },
+            "notes": "Script completed: python3 .fabro/workflows/security-review/scripts/security_review.py merge research",
+            "usage": null,
+            "timing": {
+              "wall_time_ms": 0,
+              "inference_time_ms": 0,
+              "tool_time_ms": 1322,
+              "active_time_ms": 1322
+            }
+          },
+          "dedup_rank": {
+            "status": "succeeded",
+            "context_updates": {
+              "command.output": "blob://sha256/d124ef7f758744cab62fb57faa134f12c6738b9b471e577dc45f7aabdcd894ee",
+              "run_panel": false
+            },
+            "notes": "Script completed: python3 .fabro/workflows/security-review/scripts/security_review.py dedup-rank",
+            "usage": null,
+            "timing": {
+              "wall_time_ms": 0,
+              "inference_time_ms": 0,
+              "tool_time_ms": 1322,
+              "active_time_ms": 1322
+            }
+          },
+          "panel_gate": {
+            "status": "succeeded",
+            "notes": "Conditional node evaluated: panel_gate",
+            "usage": null
           },
           "plan_matrix": {
             "status": "succeeded",
@@ -6189,6 +6158,21 @@
               "active_time_ms": 1352
             }
           },
+          "sweep_gate": {
+            "status": "succeeded",
+            "notes": "Conditional node evaluated: sweep_gate",
+            "usage": null
+          },
+          "research_join": {
+            "status": "succeeded",
+            "notes": "Joined 1 parallel branch",
+            "usage": null
+          },
+          "target_gate": {
+            "status": "succeeded",
+            "notes": "Conditional node evaluated: target_gate",
+            "usage": null
+          },
           "prepare": {
             "status": "succeeded",
             "context_updates": {
@@ -6224,50 +6208,278 @@
               "active_time_ms": 1413
             }
           },
-          "merge_research": {
+          "effort_gate": {
+            "status": "succeeded",
+            "notes": "Conditional node evaluated: effort_gate",
+            "usage": null
+          },
+          "research": {
             "status": "succeeded",
             "context_updates": {
-              "research_results_merged": 1,
-              "command.output": "blob://sha256/1116e77eb8af9fed65358b93b4330e1578c86026fc39cba600d2e078f48e1139"
+              "parallel.branch_count": 1,
+              "parallel.results": [
+                {
+                  "id": "researcher",
+                  "index": 0,
+                  "item_label": "repository:all",
+                  "status": "succeeded",
+                  "context_updates": {
+                    "last_response": "The sandbox filesystem for this run is unreachable, so I could not read a single line of the target repository. I made eight attempts across roughly three minutes of wall-clock waiting (including 20s,",
+                    "last_stage": "researcher",
+                    "output.researcher": {
+                      "findings": []
+                    },
+                    "response.researcher": "The sandbox filesystem for this run is unreachable, so I could not read a single line of the target repository. I made eight attempts across roughly three minutes of wall-clock waiting (including 20s, 45s, and 90s backoffs), using both `Bash` and `Read`, against both `/home/daytona/repos/flavorjones/sqlite3-ruby` (the `scanRoot` from the target) and `/home/daytona/workspace/sqlite3-ruby` (the stated working directory). Every call failed identically:\n\n```\nFailed to create Daytona session\n  caused by: bad request: failed to resolve container IP after 3 attempts: no IP address found. Is the Sandbox started?\n```\n\nAn independent read-only explorer sub-agent, dispatched separately, hit the same error on both `Bash` and `Read` and reported `FILESYSTEM UNAVAILABLE`. So this is an environment-level failure, not a path or permissions mistake on my part.\n\n**What this means for the review:** I performed no code reading, no source-to-sink tracing, and no verification of any kind. I have background familiarity with `sqlite3-ruby` as a project — a C extension binding libsqlite3, with obvious areas of interest such as `Statement#bind_param` handling, blob/text length arithmetic in `statement.c` and `database.c`, the `sqlite3_load_extension` surface, backup APIs, and the vendored amalgamation — but reporting anything from recollection would be fabrication. Findings in this workflow require an exact repository-relative file and line, a verbatim sink snippet, and a per-hop evidence chain, none of which I can produce without reading the tree. I am returning zero findings rather than a speculative one.\n\n**To get a real result:** restart the Daytona sandbox and re-run job `research:001-repository-e2885f2b:all`. No part of the scan completed, so the re-run needs no scoping adjustment.\n\n```json\n{\n  \"findings\": []\n}\n```"
+                  }
+                }
+              ]
             },
-            "notes": "Script completed: python3 .fabro/workflows/security-review/scripts/security_review.py merge research",
-            "usage": null,
-            "timing": {
-              "wall_time_ms": 0,
-              "inference_time_ms": 0,
-              "tool_time_ms": 1322,
-              "active_time_ms": 1322
-            }
+            "jump_to_node": "research_join",
+            "notes": "Parallel node dispatched 1 branches (1 succeeded, 0 failed)",
+            "usage": null
           },
-          "start": {
+          "research_gate": {
             "status": "succeeded",
+            "notes": "Conditional node evaluated: research_gate",
             "usage": null
           }
         },
         "next_node_id": "exit",
+        "git_commit_sha": "b8bd576bd387d145cfcff624291580c0f410cf9b",
         "node_visits": {
           "merge_research": 1,
-          "target_gate": 1,
-          "render_report": 1,
-          "panel_gate": 1,
-          "final_tally": 1,
-          "prepare": 1,
-          "research": 1,
-          "sweep_gate": 1,
-          "effort_gate": 1,
-          "research_join": 1,
           "plan_matrix": 1,
-          "research_gate": 1,
+          "research_join": 1,
           "tally": 1,
-          "start": 1,
+          "research": 1,
+          "research_gate": 1,
           "dedup_rank": 1,
-          "threat_gate": 1
+          "start": 1,
+          "target_gate": 1,
+          "prepare": 1,
+          "final_tally": 1,
+          "threat_gate": 1,
+          "panel_gate": 1,
+          "render_report": 1,
+          "sweep_gate": 1,
+          "effort_gate": 1
         }
       },
-      "diff": {}
+      "diff": {
+        "summary": {
+          "files_changed": 0,
+          "additions": 0,
+          "deletions": 0
+        }
+      }
     }
   ],
-  "conclusion": null,
+  "conclusion": {
+    "timestamp": "2026-07-31T15:33:36.109621359Z",
+    "status": "succeeded",
+    "timing": {
+      "wall_time_ms": 1966608,
+      "inference_time_ms": 0,
+      "tool_time_ms": 9363,
+      "active_time_ms": 9363
+    },
+    "final_git_commit_sha": "b8bd576bd387d145cfcff624291580c0f410cf9b",
+    "stages": [
+      {
+        "stage_id": "start",
+        "stage_label": "start",
+        "timing": {
+          "wall_time_ms": 0,
+          "inference_time_ms": 0,
+          "tool_time_ms": 0,
+          "active_time_ms": 0
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "prepare",
+        "stage_label": "prepare",
+        "timing": {
+          "wall_time_ms": 1459,
+          "inference_time_ms": 0,
+          "tool_time_ms": 1413,
+          "active_time_ms": 1413
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "target_gate",
+        "stage_label": "target_gate",
+        "timing": {
+          "wall_time_ms": 0,
+          "inference_time_ms": 0,
+          "tool_time_ms": 0,
+          "active_time_ms": 0
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "plan_matrix",
+        "stage_label": "plan_matrix",
+        "timing": {
+          "wall_time_ms": 1357,
+          "inference_time_ms": 0,
+          "tool_time_ms": 1352,
+          "active_time_ms": 1352
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "threat_gate",
+        "stage_label": "threat_gate",
+        "timing": {
+          "wall_time_ms": 0,
+          "inference_time_ms": 0,
+          "tool_time_ms": 0,
+          "active_time_ms": 0
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "research_gate",
+        "stage_label": "research_gate",
+        "timing": {
+          "wall_time_ms": 0,
+          "inference_time_ms": 0,
+          "tool_time_ms": 0,
+          "active_time_ms": 0
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "research",
+        "stage_label": "research",
+        "timing": {
+          "wall_time_ms": 1898168,
+          "inference_time_ms": 0,
+          "tool_time_ms": 0,
+          "active_time_ms": 0
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "research_join",
+        "stage_label": "research_join",
+        "timing": {
+          "wall_time_ms": 0,
+          "inference_time_ms": 0,
+          "tool_time_ms": 0,
+          "active_time_ms": 0
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "merge_research",
+        "stage_label": "merge_research",
+        "timing": {
+          "wall_time_ms": 1362,
+          "inference_time_ms": 0,
+          "tool_time_ms": 1322,
+          "active_time_ms": 1322
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "sweep_gate",
+        "stage_label": "sweep_gate",
+        "timing": {
+          "wall_time_ms": 0,
+          "inference_time_ms": 0,
+          "tool_time_ms": 0,
+          "active_time_ms": 0
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "dedup_rank",
+        "stage_label": "dedup_rank",
+        "timing": {
+          "wall_time_ms": 1325,
+          "inference_time_ms": 0,
+          "tool_time_ms": 1322,
+          "active_time_ms": 1322
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "panel_gate",
+        "stage_label": "panel_gate",
+        "timing": {
+          "wall_time_ms": 0,
+          "inference_time_ms": 0,
+          "tool_time_ms": 0,
+          "active_time_ms": 0
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "tally",
+        "stage_label": "tally",
+        "timing": {
+          "wall_time_ms": 1335,
+          "inference_time_ms": 0,
+          "tool_time_ms": 1331,
+          "active_time_ms": 1331
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "effort_gate",
+        "stage_label": "effort_gate",
+        "timing": {
+          "wall_time_ms": 0,
+          "inference_time_ms": 0,
+          "tool_time_ms": 0,
+          "active_time_ms": 0
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "final_tally",
+        "stage_label": "final_tally",
+        "timing": {
+          "wall_time_ms": 1288,
+          "inference_time_ms": 0,
+          "tool_time_ms": 1282,
+          "active_time_ms": 1282
+        },
+        "retries": 0
+      },
+      {
+        "stage_id": "render_report",
+        "stage_label": "render_report",
+        "timing": {
+          "wall_time_ms": 1344,
+          "inference_time_ms": 0,
+          "tool_time_ms": 1341,
+          "active_time_ms": 1341
+        },
+        "retries": 0
+      }
+    ],
+    "billing": {
+      "input_tokens": 5389,
+      "output_tokens": 2774,
+      "total_tokens": 135826,
+      "reasoning_tokens": 302,
+      "cache_read_tokens": 115770,
+      "cache_write_tokens": 11591,
+      "total_usd_micros": 0
+    },
+    "total_retries": 0,
+    "diff": {
+      "summary": {
+        "files_changed": 0,
+        "additions": 0,
+        "deletions": 0
+      }
+    }
+  },
   "sandbox": {
     "kind": "ready",
     "plan": {
@@ -6518,6 +6730,42 @@
       "agent_control": "running",
       "state": "succeeded"
     },
+    "exit@1": {
+      "first_event_seq": 412,
+      "prompt": null,
+      "response": null,
+      "completion": {
+        "outcome": "succeeded",
+        "notes": null,
+        "failure_reason": null,
+        "timestamp": "2026-07-31T15:33:36.091984823Z"
+      },
+      "provider_used": null,
+      "diff": null,
+      "script_invocation": null,
+      "script_timing": null,
+      "parallel_results": null,
+      "output": null,
+      "started_at": "2026-07-31T15:33:36.091957565Z",
+      "handler": "exit",
+      "graph_visit": 1,
+      "timing": {
+        "wall_time_ms": 0,
+        "inference_time_ms": 0,
+        "tool_time_ms": 0,
+        "active_time_ms": 0
+      },
+      "usage": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0,
+        "reasoning_tokens": 0,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0
+      },
+      "agent_control": "running",
+      "state": "succeeded"
+    },
     "research_join@1": {
       "first_event_seq": 311,
       "prompt": null,
@@ -6558,7 +6806,12 @@
       "first_event_seq": 396,
       "prompt": null,
       "response": null,
-      "completion": null,
+      "completion": {
+        "outcome": "succeeded",
+        "notes": "Script completed: python3 .fabro/workflows/security-review/scripts/security_review.py render-report",
+        "failure_reason": null,
+        "timestamp": "2026-07-31T15:33:33.226911886Z"
+      },
       "provider_used": null,
       "diff": null,
       "script_invocation": {
@@ -6583,6 +6836,12 @@
       "started_at": "2026-07-31T15:33:31.260708140Z",
       "handler": "command",
       "graph_visit": 1,
+      "timing": {
+        "wall_time_ms": 1344,
+        "inference_time_ms": 0,
+        "tool_time_ms": 1341,
+        "active_time_ms": 1341
+      },
       "usage": {
         "input_tokens": 0,
         "output_tokens": 0,
@@ -6592,7 +6851,7 @@
         "cache_write_tokens": 0
       },
       "agent_control": "running",
-      "state": "running"
+      "state": "succeeded"
     },
     "effort_gate@1": {
       "first_event_seq": 371,
